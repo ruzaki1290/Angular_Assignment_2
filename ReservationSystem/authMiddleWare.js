@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-
 const APP_SECRET = "myappsecret";
 const USERNAME = "admin";
 const PASSWORD = "abc123";
