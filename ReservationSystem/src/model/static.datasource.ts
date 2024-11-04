@@ -4,18 +4,18 @@ import { Observable, from } from "rxjs";
 @Injectable()
 export class StaticDataSource {
   private services: Service[] = [
-    { id: 1, name: "Area-1", session: "Morning", description: "A session from 9am-12pm" },
-    { id: 2, name: "Area-1", session: "Noon", description: "A session from 12pm-3pm" },
-    { id: 3, name: "Area-1", session: "Afternoon", description: "A session from 3pm-6pm" },
-    { id: 4, name: "Area-2", session: "Morning", description: "A session from 9am-12pm" },
-    { id: 5, name: "Area-2", session: "Noon", description: "A session from 12pm-3pm" },
-    { id: 6, name: "Area-2", session: "Afternoon", description: "A session from 3pm-6pm" },
-    { id: 7, name: "Area-3", session: "Morning", description: "A session from 9am-12pm" },
-    { id: 8, name: "Area-3", session: "Noon", description: "A session from 12pm-3pm" },
-    { id: 9, name: "Area-3", session: "Afternoon", description: "A session from 3pm-6pm" },
-    { id: 10, name: "Area-4", session: "Morning", description: "A session from 9am-12pm" },
-    { id: 11, name: "Area-4", session: "Noon", description: "A session from 12pm-3pm" },
-    { id: 12, name: "Area-4", session: "Afternoon", description: "A session from 3pm-6pm" },
+    new Service(1, "Area-1", "Morning", "A session from 9am-12pm", 100),
+    new Service(2, "Area-1", "Noon", "A session from 12pm-3pm", 75),
+    new Service(3, "Area-1", "Afternoon", "A session from 3pm-6pm", 50),
+    new Service(4, "Area-2", "Morning", "A session from 9am-12pm", 150),
+    new Service(5, "Area-2", "Noon", "A session from 12pm-3pm", 125),
+    new Service(6, "Area-2", "Afternoon", "A session from 3pm-6pm", 100),
+    new Service(7, "Area-3", "Morning", "A session from 9am-12pm", 150),
+    new Service(8, "Area-3", "Noon", "A session from 12pm-3pm", 125),
+    new Service(9, "Area-3", "Afternoon", "A session from 3pm-6pm", 100),
+    new Service(10, "Area-4", "Morning", "A session from 9am-12pm", 200),
+    new Service(11, "Area-4", "Noon", "A session from 12pm-3pm", 175),
+    new Service(12, "Area-4", "Afternoon", "A session from 3pm-6pm", 150),
   ];
 
   getServices(): Observable<Service[]> {
