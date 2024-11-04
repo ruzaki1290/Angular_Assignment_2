@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Service } from "./service.model";
-import { Observable, from } from "rxjs";
-@Injectable()
+import { Observable, from, of } from "rxjs";
+@Injectable({ providedIn: 'root' })
 export class StaticDataSource {
   private services: Service[] = [
     new Service(1, "Area-1", "Morning", "A session from 9am-12pm", 100),
@@ -19,6 +19,6 @@ export class StaticDataSource {
   ];
 
   getServices(): Observable<Service[]> {
-    return from([this.services]);
+    return of(this.services);
   }
 }
