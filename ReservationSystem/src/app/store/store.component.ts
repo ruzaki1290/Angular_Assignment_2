@@ -33,9 +33,14 @@ export class StoreComponent {
     this.sessionsPerPage = Number(newSize);
     this.changePage(1);
     }
-    get pageNumbers(): number[] {
-    return Array(Math.ceil(this.repository
-    .getServices(this.selectedSession).length / this.sessionsPerPage))
-    .fill(0).map((x, i) => i + 1);
-    }
+    // get pageNumbers(): number[] {
+    // return Array(Math.ceil(this.repository
+    // .getServices(this.selectedSession).length / this.sessionsPerPage))
+    // .fill(0).map((x, i) => i + 1);
+    // }
+
+    get pageCount(): number {
+      return Math.ceil(this.repository
+      .getServices(this.selectedSession).length / this.sessionsPerPage)
+      }
 }

@@ -8,7 +8,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "json": "json-server data.js -p 3500 -m authMiddleware.js"
-
   },
   "private": true,
   "dependencies": {
@@ -29,7 +28,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.2.10",
-    "@angular/cli": "^18.2.10",
+    "@angular/cli": "^18.2.11",
     "@angular/compiler-cli": "^18.2.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.2.0",

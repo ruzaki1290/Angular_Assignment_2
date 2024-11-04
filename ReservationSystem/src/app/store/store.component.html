@@ -24,6 +24,7 @@
           {{service.name}}
           <span class="badge rounded-pill bg-primary float-end">
             {{service.session}}
+            {{ service.price | currency:"USD":"symbol":"2.2-2" }}
           </span>
         </h4>
         <div class="card-text bg-white p-1">{{service.description}}</div>
@@ -39,10 +40,10 @@
         </select>
       </div>
       <div class="btn-group float-end">
-        <button type="button" *ngFor="let page of pageNumbers" (click)="changePage(page)"
-                class="btn btn-outline-primary"
-                [class.active]="page == selectedPage">
-          {{page}}
+        <button *counter="let page of pageCount" (click)="changePage(page)"
+        class="btn btn-outline-primary"
+        [class.active]="page == selectedPage">
+        {{page}}
         </button>
       </div>
     </div>
